@@ -1,15 +1,9 @@
 const routes = require("express").Router();
+const Auth  = require("../controllers/auth.controllers");
 
-routes.post('signin',(req, res) =>{
-    res.status(200).json({
-        message : "Home"
-    });
-});
 
-routes.post('signup',(req, res) =>{
-    res.status(200).json({
-        message : "Home"
-    });
-});
+routes.post('/signin',Auth.signIn);
+
+routes.post('/signup',Auth.signUp);
 
 module.exports = routes
