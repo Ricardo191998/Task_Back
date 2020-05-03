@@ -9,8 +9,14 @@ var taskSchema  = new Schema({
     },
     description: String ,
     user : {
-        type: ObjectId, 
-        ref: 'User'
+        type: Schema.Types.ObjectId, 
+        ref: 'User',
+        required: true
+    },
+    shared : {
+        type: [Schema.Types.ObjectId],
+        ref: 'SharedTask',
+        required : true
     }
 });
 

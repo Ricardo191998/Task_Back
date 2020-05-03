@@ -4,7 +4,11 @@ const bcrypt = require("bcrypt");
 const userSchema = new Schema({
     name : String ,
     email : String ,
-    password : String
+    password : String,
+    friends:  {
+        type: [Schema.Types.ObjectId], 
+        ref: 'User'
+    }
 });
 
 
