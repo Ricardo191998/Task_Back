@@ -7,7 +7,7 @@ const FriendController = require("../controllers/friend.controllers");
 routes.get('/', auth ,UserController.home);
 
 //CRUD TASK
-routes.post('/createTask', auth , UserController.createTask);
+routes.post('/createTask/:id', auth , UserController.createTask);
 routes.get('/getAllTask',auth, UserController.getAllTask);
 routes.get('/getTask/:id ', auth, UserController.getTask);
 routes.get('/deteleTask/:id', auth , UserController.deleteTask);
